@@ -1,3 +1,6 @@
 # Veno
-A sql like query tokenizer and parser for VenoDB.
-Precompiled executable -> main.exe
+A sql like query tokenizer and parser for VenoDB.\n
+Precompiled executable -> main.exe or compile with
+```
+g++ main.cc ./src/qres.cc -o main -lstdc++ -std=c++17; ./main
+```
