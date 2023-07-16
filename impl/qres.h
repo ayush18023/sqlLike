@@ -3,7 +3,7 @@
 #include <vector>
 #include <cassert>
 
-#include "decs.h"
+#include "../src/decs.h"
 
 namespace Query{
     class Lexer{
