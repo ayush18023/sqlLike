@@ -25,5 +25,5 @@ jobs:
           IMAGE_TAG: latest
         run:
           docker build -t $REGISTERY/$REPOSITORY:$IMAGE_TAG . 
-          docker push $REGISTERY/$REPOSITORY:$IMAGE_TAG . 
+          docker push $REGISTERY/$REPOSITORY:$IMAGE_TAG
        
