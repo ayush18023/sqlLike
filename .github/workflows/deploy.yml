@@ -23,7 +23,7 @@ jobs:
           REGISTERY: tyranthex
           REPOSITORY: veno_test
           IMAGE_TAG: latest
-        run:
+        run: |
           docker build -t $REGISTERY/$REPOSITORY:$IMAGE_TAG . 
           docker push $REGISTERY/$REPOSITORY:$IMAGE_TAG
        
