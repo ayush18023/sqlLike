@@ -57,13 +57,12 @@ typedef enum{
     TYPE_ERROR
 } Types;
 
-enum class StatementType{
-    STATEMENT_CREATE,
+typedef enum {
     STATEMENT_GET,
     STATEMENT_INSERT,
     STATEMENT_UPDATE,
     STATEMENT_DELETE,
-} ;
+} StatementType;
 
 typedef struct {
     StatementType type;
