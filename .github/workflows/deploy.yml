@@ -1,0 +1,29 @@
+name: Deploy Veno
+on:
+  push:
+     branches: ["master"] 
+
+jobs:
+  push-to-hub:
+    name: Push Docker Image to docker hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checout the repo
+        uses: actions/checkout@v3
+
+      - name: Login to docker hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        id: veno-builder
+        env: 
+          REGISTERY: tyranthex
+          REPOSITORY: veno_test
+          IMAGE_TAG: latest
+        run:
+          docker build -t $REGISTERY/$REPOSITORY:$IMAGE_TAG . 
+          docker push $REGISTERY/$REPOSITORY:$IMAGE_TAG . 
+       
