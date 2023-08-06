@@ -1,7 +1,7 @@
 name: Deploy Veno
 on:
   push:
-     branches: ["master"] 
+     branches: ["main"] 
 
 jobs:
   push-to-hub:
