@@ -213,7 +213,7 @@ Status RocksDB::singleDelete(ColumnFamilyHandle* handler,std::string key){
 // int main(){
 //     RocksDB rb;
 
-//     ColumnFamilyHandle* cfhandler = rb.createInstance(".config");
+//     // ColumnFamilyHandle* cfhandler = rb.createInstance(".config");
 //     ColumnFamilyHandle* cf = rb.getHandlerByName("new_ccc");
 
 //     std::cout<< cf->GetName() << std::endl;
