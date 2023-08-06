@@ -11,7 +11,7 @@ RUN apt-get update && \
 COPY . .
 
 # Compile your C++ application
-RUN g++ ./Index/hnsw.cc -o hnsw -lstdc++ -std=c++17
+RUN  g++ ./main.cc ./impl/qres.cc -o ./main.exe -lstdc++ -std=c++17
 
 # Specify the command to run your application when the container starts
-CMD ["./hnsw"]
+CMD ["./main.exe"]
