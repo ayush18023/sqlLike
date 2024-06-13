@@ -31,5 +31,5 @@ create cluster instance.attr_name
 
 Precompiled executable -> main.exe or compile with
 ```
-g++ main.cc ./src/qres.cc -o main -lstdc++ -std=c++17; ./main
+g++ main.cc ./impl/qres.cc -o main -lstdc++ -std=c++17; ./main
 ```
